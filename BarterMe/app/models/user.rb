@@ -35,10 +35,6 @@ class User < ActiveRecord::Base
 	#   @user.save!
 	#   Mailer.create_and_deliver_password_change(@user, random_password)
 	# end
-
-
-
-	
-	# has_and_belongs_to_many :offers, foreign_key: "offer_id"
+	has_and_belongs_to_many :offers, foreign_key: "offer_id"
 	
 end

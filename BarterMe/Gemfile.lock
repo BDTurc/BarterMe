@@ -26,12 +26,7 @@ GEM
       thread_safe (~> 0.1)
       tzinfo (~> 0.3.37)
     arel (4.0.2)
-    autoprefixer-rails (5.1.7)
-      execjs
-      json
     bcrypt-ruby (3.0.1)
-    bootstrap-sass (3.2.0.2)
-      sass (~> 3.2)
     builder (3.1.4)
     byebug (3.5.1)
       columnize (~> 0.8)
@@ -102,7 +97,6 @@ GEM
       bundler (>= 1.3.0, < 2.0)
       railties (= 4.0.0)
       sprockets-rails (~> 2.0.0)
-    rails-admin (0.0.0)
     railties (4.0.0)
       actionpack (= 4.0.0)
       activesupport (= 4.0.0)
@@ -152,9 +146,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  autoprefixer-rails
   bcrypt-ruby (~> 3.0.0)
-  bootstrap-sass (~> 3.2.0)
   coffee-rails (~> 4.0.0)
   elasticsearch
   faker
@@ -165,7 +157,6 @@ DEPENDENCIES
   pry
   pry-byebug
   rails (= 4.0.0)
-  rails-admin
   sass-rails (~> 4.0.0)
   sdoc
   searchkick

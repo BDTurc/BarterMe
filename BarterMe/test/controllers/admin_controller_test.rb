@@ -2,7 +2,7 @@ require 'test_helper'
 
 class AdminControllerTest < ActionController::TestCase
   test "should get index" do
-    get :index
+    get :success
     assert_response :success
   end
 
