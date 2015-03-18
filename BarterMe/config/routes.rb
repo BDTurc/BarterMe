@@ -1,19 +1,25 @@
 BarterMe::Application.routes.draw do
+  resources :homepages
+
+  resources :categories
+
   get 'admin' => 'admin#index'
+  get 'myitems' => 'items#my_items'
+
+  get 'logout' => 'sessions#destroy'
+
   controller :sessions do
     get 'login' => :new
     post 'login' => :create
     delete 'logout' => :destroy
+  end
 
 
   # get "sessions/new"
   get "sessions/create"
   get "sessions/destroy"
   resources :offers
-
   resources :users
-
-
   resources :items
 
 end
@@ -72,4 +78,3 @@ end
   #     # (app/controllers/admin/products_controller.rb)
   #     resources :products
   #   end
-end
