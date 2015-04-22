@@ -12,7 +12,12 @@
 	<%= javascript_include_tag "application", "data-turbolinks-track" => true %>
 	<%= csrf_meta_tags %>
 </head>
-<nav class="navbar navbar-default">
+<style type="button/css">
+		ul li:hover ul {
+			display: block; /* display dropdown */
+		}
+</style>
+<nav class="nav-tabs">
 	<div class="container">
 		<div class="navbar-header">
 			<a class="navbar-brand" href="/"> <span class="glyphicon glyphicon-home"></span> Barter Me</a>
@@ -27,8 +32,11 @@
 				<li><a href="/items">Items</a></li> 
 				<li><a href="/offers">Offers</a></li>
 				<li><%= link_to "Watchlist", cart_path(@cart) %></li>
-				<div class="btn-group">
-				  <button type="button" data-toggle="dropdown" aria-expanded="false">
+				
+				<li>
+
+				<div style="right:50px">	
+				  <button data-toggle="dropdown" aria-expanded="false">
 				    <%= image_tag @current_user.image, :size => "60x40" %>
 				  </button>
 				  <ul class="dropdown-menu" role="menu">
@@ -36,13 +44,11 @@
 			   <li><a href="/items/my_items">My Items</a></li>
 			   <li> <a href="/logout">Log out</a><li>
 				  </ul>
+				  <li><div style="top:8px; position: relative;">
+				  <%= button_to 'Make a Barter', new_offer_form_path, :method => :get , class: 'btn btn-success'%></li>
 				</div>
-			</ul>
-			
-			
-			
-			<%= button_to 'Make a Barter', new_offer_form_path, :method => :get , class: 'btn btn-success pull-right btn-lg', type: 'button'%>
-
+				 </ul>
+			</div>
 			    <% else %>
 				
 				<li><a href="/login">Login</a></li>

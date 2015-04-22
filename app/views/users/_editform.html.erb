@@ -48,12 +48,14 @@
 
 <div class="form-group" style="margin-bottom:20px">
     <%= f.label :looking_for, 'Looking For?:' %>
+    <p>
     <%= f.collection_check_boxes(:looking_for, Category.all, :id, :name, :checked => @user.looking_for)%>
+    </p>
   </div>
 
   <% begin %>
   <% if admin? %>
-    <div class = "form-group" style="margin-bottom:20px">
+    <div class = "form-group">
       <%= f.label :admin, 'Admin?:' %>
       <%= f.select(:admin, options_for_select([['Yes', true], ['No',false]], @user.admin)) %>
     </div>
@@ -62,10 +64,11 @@
   <% rescue %>
   <% end %>
 
-  <div class="btn btn-default">
+
     <%= f.submit "Submit", :class => 'btn btn-success btn-lg'%>
+
+  <button class="btn btn-success btn-lg">
+    <%= link_to 'Back', users_path %>
   </div>
-<%= link_to 'Back', users_path %>
-</div>
 
 <% end %>

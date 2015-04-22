@@ -2,10 +2,12 @@
 <% if notice %>
 <p id="notice"><%= notice %></p>
 <% end %>
+
+<h2><center>This is Your Homepage</center></h2>
 <div class="row">
   <div class="container-fluid" style="margin-bottom: 1px">
     <div class="span4">
-      <div class="col-md-4" style="padding-left:20px; border-left: 1px solid #ccc; text-shadow: 2px 2px black; ">
+      <div class="col-md-4">
         <div class="jumbotron">
          <h2> TOP 5 LISTINGS</h2>
          <p><font size="5">
@@ -18,13 +20,13 @@
        </div>
      </div>
      <div class="span4">
-      <div class="col-md-4" style="padding-left:20px; border-left: 1px solid #ccc; text-shadow: 2px 2px black;">
+      <div class="col-md-4">
        <div class="jumbotron">
          <h2> BARTER OF THE DAY</h2>
        </div>
      </div>
      <div class="span4">
-      <div class="col-md-4" style="padding-left:20px; border-right: 1px solid #ccc; border-left: 1px solid #ccc; text-shadow: 2px 2px black;">
+      <div class="col-md-4">
        <div class="jumbotron">
          <h2> RECOMMENDED BARTERS </h2>
          <p style="color:red"><font size="5">
@@ -33,7 +35,8 @@
 		<%= link_to item.name, "/items/#{item.id}" %> <br>
 		<% end %>
 		<% end %>
-           <%= link_to "Feeling Lucky?", "/items/#{(rand(Item.first.id.. Item.last.id))}" %>
+           <%=link_to "Feeling Lucky?", "/items/#{(rand(Item.first.id.. Item.last.id))}" %>
+           <h2>
          </div>
        </div>
      </div>
