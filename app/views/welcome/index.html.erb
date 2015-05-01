@@ -2,13 +2,10 @@
 <% if notice %>
 <p id="notice"><%= notice %></p>
 <% end %>
-
-<h2><center>This is Your Homepage</center></h2>
-<div class="row">
-  <div class="container-fluid" style="margin-bottom: 1px">
-    <div class="span4">
+<h1><center> WELCOME TO BARTER ME<center></h1>
+ 
+ <div class="jumbotron">
       <div class="col-md-4">
-        <div class="jumbotron">
          <h2> TOP 5 LISTINGS</h2>
          <p><font size="5">
 	     <% @top_categories[0,5].each do |k, v| %>
@@ -18,16 +15,11 @@
 	    <br> <%= link_to "All Categories", listings_path %>
          </font></p>
        </div>
-     </div>
-     <div class="span4">
       <div class="col-md-4">
-       <div class="jumbotron">
          <h2> BARTER OF THE DAY</h2>
        </div>
-     </div>
      <div class="span4">
       <div class="col-md-4">
-       <div class="jumbotron">
          <h2> RECOMMENDED BARTERS </h2>
          <p style="color:red"><font size="5">
 	     <% if  @current_user != nil && @current_user.looking_for.size > 1 %>
@@ -37,11 +29,8 @@
 		<% end %>
            <%=link_to "Feeling Lucky?", "/items/#{(rand(Item.first.id.. Item.last.id))}" %>
            <h2>
-         </div>
        </div>
      </div>
-   </div>
- </div>
+  </div>
 </div>
-
 
